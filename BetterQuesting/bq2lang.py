@@ -12,6 +12,7 @@ KEY = {
     "line": "questLines:9",  # 存储所有的章节
     "q": "quests:9",  # 具体的章节
     "id": "id:3",  # 章节关联的任务 ID
+    "lid": "lineID:3",  # 章节 ID
 
     "pro": "properties:10",  # 无用固定字段
     "bq": "betterquesting:10",  # 无用固定字段
@@ -32,8 +33,8 @@ if __name__ == '__main__':
         logging.debug("DefaultQuests.json 文件已经读取")
 
     # 将 json 文件构建为语言文件，格式如下
-    # "db.0:10.3.name": "xxxxxxxxxxxx"
-    # "line.2:10.2.desc": "xxxxxxxxxxxxx"
+    # "db.3.name": "xxxxxxxxxxxx"
+    # "line.2.desc": "xxxxxxxxxxxxx"
     DATABASE = {}  # 顾名思义，存储所有任务
     INDEX = {}  # 存储章节对应任务的
     OUT = collections.OrderedDict()  # 有序词典，最后输出语言文件用的
@@ -52,10 +53,11 @@ if __name__ == '__main__':
     # 开始有序理出章节对应任务
     for k, v in INDEX.items():
         # 存储章节标题和描述
-        OUT['line.{}.name'.format(str(k[:-3]))] = MAIN[KEY.get('line')][k][
+        OUT['line.{}.name'.format(str(MAIN[KEY.get('line')][k][KEY.get('lid')]))] = MAIN[KEY.get('line')][k][
             KEY.get('pro')][KEY.get('bq')][KEY.get('name')]
-        OUT['line.{}.desc'.format(str(k[:-3]))] = MAIN[KEY.get('line')][k][
+        OUT['line.{}.desc'.format(str(MAIN[KEY.get('line')][k][KEY.get('lid')]))] = MAIN[KEY.get('line')][k][
             KEY.get('pro')][KEY.get('bq')][KEY.get('desc')].lstrip()
+        print(str(MAIN[KEY.get('line')][k][KEY.get('lid')]))
 
         # 存储具体任务
         # 因为一些原因，可能会存在章节中存有不存在的任务 ID，必须要进行校验
