@@ -49,7 +49,7 @@
   "db.258.desc": "（我也不会用这玩意，你们自己看着弄吧）You can eject items onto them with the AutoEjector, push items from them into tile entities next to them with a Pulse Piston, insert them into tile entities with Insertion Hatches and carry them upwards with Fan Lifts and Lift Receivers.\n\n You can transport fluids with Pipes, in the way that you use an Extraction Pump to extract from tile entities into the Pipes.",
   "db.378.name": "来自水的资源",
   "db.378.desc": "将河篦放置在水边并给它木制筛网，它就会产出铁粒、镍粒和铜粒，需要放置在y轴高度60-70的地方",
-  "db.465.name": "Separating Gravel",
+  "db.465.name": "淘金",
   "db.465.desc": "The magnetic Centrifuge allows you to separate Gravel into Iron and Nickel Nuggets.",
   "db.630.name": "Something is Better than Nothing",
   "db.630.desc": "Scrap Furnace allows you to repurpose broken components into metal nuggets to be used in making new component. §c\n\nNOTE: §c§YY§rou will not recieve the amount of material used in the original component craft, as the process is not 100% efficient.",
