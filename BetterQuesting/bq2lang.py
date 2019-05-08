@@ -67,4 +67,4 @@ if __name__ == '__main__':
 
     # 输出成文件
     with open('zh_cn.json', 'w', encoding='utf-8') as w:
-        j = json.dump(OUT, w, ensure_ascii=False, indent=2, separators=(',', ': '))
+        json.dump(OUT, w, ensure_ascii=False, indent=2, separators=(',', ': '))
