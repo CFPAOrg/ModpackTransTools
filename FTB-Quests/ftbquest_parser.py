@@ -126,4 +126,4 @@ if __name__=="__main__":
     if args.output_lang != None:
         write_lang_file(lang,args.output_lang,args.output_format)
     if args.output_diff != None:
-        write_lang_file(lang,args.output_diff,args.output_format)
+        write_lang_file(diff,args.output_diff,args.output_format)
