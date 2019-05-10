@@ -22,13 +22,13 @@ def write_lang_file(lang,filepath,output_format):
 def parse_lang(file_path):
     f=open(file_path)
     lang={}
-    if file_path.endwiths('.lang'):
+    if file_path.endswith('.lang'):
         for line in f:
             line=line.strip()
             if len(line)>0 and not line.startswith('#') and '=' in line:
                 pair=line.split('=',1)
                 lang[pair[0]]=pair[1]
-    elif file_path.endwiths('.json'):
+    elif file_path.endswith('.json'):
         lang=json.load(f)
     else:
         assert False, "expect a json or lang file"
