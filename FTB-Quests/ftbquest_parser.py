@@ -3,7 +3,7 @@ import os
 import json
 import sys
 import argparse
-
+import shutil
 def clean_mkdirs(path):
     if os.path.exists(path):
         shutil.rmtree(path)
@@ -45,11 +45,11 @@ class Visitor:
         self.generate_nbt=generate_nbt
 
     def setvalue(self,n, key):
-        if not self.generate_nbt:
-            return
         if str(n)=="":
             return
         self.lang[key]=str(n)
+        if not self.generate_nbt:
+            return
         if self.hardcode:
             if key in self.target_lang and (self.reference_lang==None or self.reference_lang[key] == str(n)):
                 n.value=self.target_lang[key]
@@ -57,7 +57,7 @@ class Visitor:
                 self.diff_lang[key]=str(n)
         else:
             n.value='{%s}'%key
-            if not (key in self.target_lang and (self.reference_lang==None or self.reference_lang[key] == str(n))):
+            if self.target_lang!=None and not (key in self.target_lang and (self.reference_lang==None or self.reference_lang[key] == str(n))):
                 self.diff_lang[key]=str(n)
 
     def visit(self,key,node,prefix):
@@ -78,18 +78,18 @@ class Visitor:
                         self.visit('title',tag,prefix_i)
 
 def main(srcdir,dstdir,tar_lang,ref_lang,generate_nbt=False,hardcoding=True,namespace='modpack.ftbquests'):
-    FTBQ_path=os.path.join(dstdir,'config/ftbquests/normal/')
-    clean_mkdirs(FTBQ_path)
     visitor=Visitor(tar_lang,ref_lang,hardcoding,generate_nbt)
     chapters=os.listdir(srcdir)
     if generate_nbt:
-        os.mkdir(os.path.join(dstdir,'chapters'))
+        FTBQ_path=os.path.join(dstdir,'config/ftbquests/normal/')
+        clean_mkdirs(FTBQ_path)
+        os.mkdir(os.path.join(FTBQ_path,'chapters'))
     for chapter in chapters:
         #TODO os.path.isdir()
         if chapter=='index.nbt':
             continue
         if generate_nbt:
-            os.mkdir(os.path.join(dstdir,'chapters',chapter))
+            os.mkdir(os.path.join(FTBQ_path,'chapters',chapter))
         files=os.listdir(os.path.join(srcdir,chapter))
         for NBTfilename in files:
             filepath=os.path.join(srcdir,chapter,NBTfilename)
@@ -100,7 +100,7 @@ def main(srcdir,dstdir,tar_lang,ref_lang,generate_nbt=False,hardcoding=True,name
                 if key in keys:
                     visitor.visit(key,n,prefix)
             if generate_nbt:
-                n.write_file(os.path.join(dstdir,'chapters',chapter,NBTfilename))
+                n.write_file(os.path.join(FTBQ_path,'chapters',chapter,NBTfilename))
     return visitor.lang,visitor.diff_lang
 
 def bool_of_str(string):
