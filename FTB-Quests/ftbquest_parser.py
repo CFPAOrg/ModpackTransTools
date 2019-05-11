@@ -31,7 +31,7 @@ def parse_lang(file_path):
     elif file_path.endswith('.json'):
         lang=json.load(f)
     else:
-        assert False, "expect a json or lang file"
+        assert False, "expecting a json or lang file"
     f.close()
     return lang
 
@@ -47,18 +47,19 @@ class Visitor:
     def setvalue(self,n, key):
         if str(n)=="":
             return
+        if str(n).startswith('{') and str(n).endswith('}'):
+            assert False, "already in form of {lang.key}"
         self.lang[key]=str(n)
+        diff_flag=self.reference_lang!=None and self.reference_lang[key] != str(n)
+        if diff_flag:
+            self.diff_lang[key]=str(n)
         if not self.generate_nbt:
             return
         if self.hardcode:
-            if key in self.target_lang and (self.reference_lang==None or self.reference_lang[key] == str(n)):
+            if key in self.target_lang and not diff_flag:
                 n.value=self.target_lang[key]
-            else:
-                self.diff_lang[key]=str(n)
         else:
             n.value='{%s}'%key
-            if self.target_lang!=None and not (key in self.target_lang and (self.reference_lang==None or self.reference_lang[key] == str(n))):
-                self.diff_lang[key]=str(n)
 
     def visit(self,key,node,prefix):
         n=node.get(key)
@@ -85,14 +86,14 @@ def main(srcdir,dstdir,tar_lang,ref_lang,generate_nbt=False,hardcoding=True,name
         clean_mkdirs(FTBQ_path)
         os.mkdir(os.path.join(FTBQ_path,'chapters'))
     for chapter in chapters:
-        #TODO os.path.isdir()
-        if chapter=='index.nbt':
+        chapter_path=os.path.join(srcdir,chapter)
+        if not os.path.isdir(chapter_path):
             continue
         if generate_nbt:
             os.mkdir(os.path.join(FTBQ_path,'chapters',chapter))
-        files=os.listdir(os.path.join(srcdir,chapter))
+        files=os.listdir(chapter_path)
         for NBTfilename in files:
-            filepath=os.path.join(srcdir,chapter,NBTfilename)
+            filepath=os.path.join(chapter_path,NBTfilename)
             n=nbt.nbt.NBTFile(filepath,'rb')
             keys=n.keys()
             prefix='%s.%s.%s'%(namespace,chapter,NBTfilename.split('.')[0])
@@ -105,7 +106,7 @@ def main(srcdir,dstdir,tar_lang,ref_lang,generate_nbt=False,hardcoding=True,name
 
 def bool_of_str(string):
     dic={'false':False,'False':False,'True':True,'true':True}
-    assert string in dic, "expect a boolean value"
+    assert string in dic, "expecting a boolean value"
     return dic[string]
 
 if __name__=="__main__":
