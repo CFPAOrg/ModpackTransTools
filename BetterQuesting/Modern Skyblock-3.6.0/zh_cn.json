@@ -431,7 +431,7 @@
   "db.462.desc": "The Reinforced Capacitor and Reservoir have 9 times the capacity the Basic ones do and the Satchel has one more row than the Hardened one.",
   "db.463.name": "Signalum Portable Storage",
   "db.463.desc": "The Signalum Capacitor and Reservoir have 16 times the capacity the Basic ones do and the Satchel has one more row than the Reinforced one.",
-  "db.464.name": "Resonant Portable Storage",
+  "db.464.name": "谐振便携储存",
   "db.464.desc": "The Resonant Capacitor and Reservoir have 25 times the capacity the Basic ones do and the Satchel has one more row than the Signalum one.",
   "db.915.name": "Leadstone Jetpack",
   "db.915.desc": "The Leadstone Jetpack uses RF to function. In only stores 80kRF, but uses 32RF/t.",
