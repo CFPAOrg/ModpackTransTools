@@ -1162,7 +1162,7 @@
   "db.508.name": "连续自动合成",
   "db.508.desc": "你可以快速地同时合成多种物品，不过这需要能量。",
   "db.509.name": "额外的安全措施",
-  "db.509.desc": "The Destination Analyzer checks if the destination has power and the Matter Booster lets you teleport to a destination that doesn't have power.",
+  "db.509.desc": "目标分析仪检测目的地是否有足够的能量并且物质助推器是否有足够的能量维持传输。",
   "db.510.name": "Builder",
   "db.510.desc": "The Builder can interact with a large area of blocks, but what it does depends on how it's configured.",
   "db.511.name": "Copying",
