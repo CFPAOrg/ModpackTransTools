@@ -1657,7 +1657,7 @@
   "db.698.desc": "The Alveary is a much better multiblock version of the Apiary that you can add different parts to in order to acommodate the many different species of Bees.",
   "db.702.name": "Automatable Apiary",
   "db.702.desc": "The Industrial Apiary is an upgradable powered Apiary.",
-  "db.703.name": "Forced Mutations",
+  "db.703.name": "强制突变",
   "db.703.desc": "The Mutagen Producer creates Mutagen from Redstone, Glowstone, Uranium and Yellorium and can be used in the Mutatron and Advanced Mutatron for breeding bees without any special requires, but yet with a small chance of killing the Bees.",
   "db.704.name": "Simpler Gene Copying",
   "db.704.desc": "You can collect random genes from Bees, copy them, add them to other Bees or add them to a Template.",
