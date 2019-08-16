@@ -1519,7 +1519,7 @@
   "db.584.desc": "The Dawnstone Anvil, in combination with the Automatic Hammer, can automatically deconstruct or repair your tools with different materials.",
   "db.586.name": "Ignem Reactor",
   "db.586.desc": "The Ignem Reactor consists of multiple Embers machines running together. It allows you to produce more ember from your Ember Shards.",
-  "db.772.name": "Ember Piping",
+  "db.772.name": "余烬管道",
   "db.772.desc": "Ember's Pipes require an Extractor powered with redstone (prefferably with a Lever) for extracting, but are much faster than Factory Tech's Conveyors. They can be filtered with the Item Transfer and there is also an Item Vacuum for sucking up items and an Item Dropper for dropping them.",
   "db.830.name": "Advanced Ember Transferring",
   "db.830.desc": "The Ember Spread Burst allows you to separately output Ember from all of its sides, while the Ember Funnel can concentrate Ember from multiple sources into one machine.",
