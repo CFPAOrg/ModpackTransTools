@@ -611,7 +611,7 @@
   "db.445.desc": "The Turbine is a multiblock that Generates power from Steam.\n \n These are all the materials needed for the smallest possible Turbine.",
   "db.446.name": "产热",
   "db.446.desc": "Mekanism alllows you to turn power or fuel into heat.",
-  "db.771.name": "Thermal Evaporator",
+  "db.771.name": "热力蒸馏器",
   "db.771.desc": "The Thermal Evaporator is a multiblock which can contiuously turn Water into Brine, making it great for automation. It needs to have a 4x4 base and then a ring at least 2 tall. In the corners of the last layer, you place Advanced Solar Generators.",
   "db.773.name": "Purifying With Fluids",
   "db.773.desc": "The Purification Chamber uses Oxygen to turn Ores into Clumps.",
