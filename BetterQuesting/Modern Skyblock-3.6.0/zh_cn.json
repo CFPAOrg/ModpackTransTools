@@ -251,7 +251,7 @@
   "db.819.desc": "奇妙玻璃（或暗色奇妙玻璃）可以让玩家自由进出，但怪物不行",
   "db.940.name": "暗色玻璃",
   "db.940.desc": "它能阻断亮度传播",
-  "db.972.name": "Indexer",
+  "db.972.name": "索引器",
   "db.972.desc": "The Indexer allows you to interact with multiple inventories, as long as they are connected to it via Transfer Pipes. It doesn't require power to function, but getting items out of it takes a while and you need at least 8 GP for it to work.",
   "db.1213.name": "魔法速度升级",
   "db.1213.desc": "无任务描述",
