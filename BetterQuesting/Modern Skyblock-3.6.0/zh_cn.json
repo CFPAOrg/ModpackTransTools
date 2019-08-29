@@ -52,7 +52,7 @@
   "db.465.name": "淘金",
   "db.465.desc": "你可以用磁力离心机离心沙砾来获得铁粒和镍粒",
   "db.630.name": "聊胜于无！",
-  "db.630.desc": "Scrap Furnace allows you to repurpose broken components into metal nuggets to be used in making new component. §c\n\nNOTE: §c§YY§rou will not recieve the amount of material used in the original component craft, as the process is not 100% efficient.",
+  "db.630.desc": "废料熔炉允许你重新把被拆成的组件装成金属制片用于制造新的组件。§c\n\n注意：§c§YY§rou不会重复原始组件器所使用的材料数量，因为这个过程不是100%的效率。",
   "db.914.name": "充能站",
   "db.914.desc": "The Core Charger allows you to charge Unprimed Energy Cores. If your Core reaches 100 percent, this machine will explode, therefore it's best to charge it to about 80 percent.",
   "db.1129.name": "充能站",
