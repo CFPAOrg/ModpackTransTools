@@ -1463,7 +1463,7 @@
   "db.438.desc": "If you want AoE attunement perks to be active without you being there, you can put an Attuned Rock/Celestial Crystal on a Ritual Pedestal, with its multiblock setup, put a Ritual Anchor 3 blocks above it and one where you can the effect to happen, and link them together. You can enchance the effect by connecting a Floating Crystal to the Pedestal and then putting Lenses where green sparkles form.",
   "db.516.name": "Containment Chalice",
   "db.516.desc": "The Containment Chalice can be filled up with Liquid Starlight and it will be used instead of the blocks in the Starlight Infuser's structure. If there are 2 next to one another with fluids that can react with each other (for example Water and Lava), they will generate the block that'd be created when they are touching, as a dropped item.",
-  "db.587.name": "Celestial Crystals",
+  "db.587.name": "天体水晶石",
   "db.587.desc": "By throwing Stardust and a Rock Crystal into Liquid Starlight, a Cluster will be created. This Cluster will slowly grow, but can be sped up by placing Starmetal Ore below it. Once it's fully grown, you can break it to obtain a Celestial Crystal.",
   "db.588.name": "星辉祭坛",
   "db.588.desc": "星辉祭坛比星辉合成台多4个物品格。",
