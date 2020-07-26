@@ -914,7 +914,7 @@
   "db.471.name": "真正的核聚变",
   "db.471.desc": "聚变反应堆需要一个聚变堆核心，且其四个方向应分别至少有一个聚变连接器，并在最外圈用电磁体搭成一个空心方形圆环，注意，只有当所有磁体都被充能时，反应堆才会开始工作",
   "db.476.name": "活性冷却液（?）",
-  "db.476.desc": "The Active Fluid Coller, when given a coolant can cool down a Fission or Fusion Reactor.",
+  "db.476.desc": "液冷器，当输入冷却剂时，可以冷却裂变或聚变反应堆。",
   "db.477.name": "收集气体元素",
   "db.477.desc": "你可以制作从大气中收集氮气和氧气的机器",
   "db.716.name": "熔盐反应堆",
