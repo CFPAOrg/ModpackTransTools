@@ -11,10 +11,18 @@ def get_all_json(path):
     return l
 
 class Visitor:
-    def __init__(self,base_path):
-        self.base_path=base_path
-        self.lang={}
+    def __init__(self,mode,lang):
+        self.mode=mode
+        self.lang=lang
         self.target_fields=['name','description','title','text','title2','pages']
+        self.visit0=getattr(self,mode)
+
+    def parse(self,lang_key,base,index):
+        self.lang[lang_key]=base[index]
+
+    def render(self,lang_key,base,index):
+        if lang_key in self.lang:
+            base[index]=self.lang[lang_key]
 
     def visit(self,node,prefix):
         if type(node)==dict:
@@ -23,7 +31,7 @@ class Visitor:
                     val=node[key]
                     lang_key="%s.%s"%(prefix,key)
                     if type(val)==str:
-                        self.lang[lang_key]=val
+                        self.visit0(lang_key,node,key)
                     elif type(val)==list:
                         self.visit(val,lang_key)
         elif type(node)==list:
@@ -32,13 +40,28 @@ class Visitor:
                 
 
 if __name__=="__main__":
-    path=sys.argv[1]
+    mode=sys.argv[1]
+    assert mode=='parse' or mode=='render'
+    
+    #path=assets/.../patchouli_books/.../en_us/
+    path=sys.argv[2]
     l=get_all_json(path)
-    visitor=Visitor(path)
+    
+    json_file=sys.argv[3]
+    lang={}
+    if mode=='render':
+        with open(json_file) as f:
+            lang=json.load(f)
+    visitor=Visitor(mode,lang)
     for filepath in l:
         with open(filepath) as f:
-            node=json.load(f)
+            root=json.load(f)
         prefix=os.path.relpath(filepath,path).replace('/','.')[:-5]
-        visitor.visit(node,prefix)
-    with open(sys.argv[2],'w') as f:
-        json.dump(visitor.lang,f)
+        visitor.visit(root,prefix)
+        #直接在原文件位置写的，用的时候要注意
+        if mode=='render':
+            with open(filepath,'w') as f:
+                f.write(json.dumps(root,indent=4))
+    if mode=='parse':
+        with open(json_file,'w') as f:
+            f.write(json.dumps(lang,indent=4))
