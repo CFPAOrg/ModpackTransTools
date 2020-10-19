@@ -1428,7 +1428,7 @@
   "db.641.name": "幻灵接口",
   "db.641.desc": "你可以将幻灵接口和方块连接起来，以便可以远距离与方块进行交互",
   "db.643.name": "另一种煤",
-  "db.643.desc": "By putting Canola Seeds in a Composter they'll turn into Biomass, which you can then smelt to turn it into Bio Coal.",
+  "db.643.desc": "把油菜种子放到堆肥机中可以得到生物质，生物质可以烧制成生物燃料",
   "db.656.name": "自动种田",
   "db.656.desc": "The Farmer uses power to harvest and plant crops in an area in front of it.",
   "db.657.name": "用RF充能",
