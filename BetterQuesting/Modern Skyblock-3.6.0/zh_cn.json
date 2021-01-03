@@ -1464,7 +1464,7 @@
   "db.516.name": "遏制圣杯",
   "db.516.desc": "The Containment Chalice can be filled up with Liquid Starlight and it will be used instead of the blocks in the Starlight Infuser's structure. If there are 2 next to one another with fluids that can react with each other (for example Water and Lava), they will generate the block that'd be created when they are touching, as a dropped item.",
   "db.587.name": "天体水晶石",
-  "db.587.desc": "By throwing Stardust and a Rock Crystal into Liquid Starlight, a Cluster will be created. This Cluster will slowly grow, but can be sped up by placing Starmetal Ore below it. Once it's fully grown, you can break it to obtain a Celestial Crystal.",
+  "db.587.desc": "将水晶石与星尘扔进星能液中等待一段时间即可产生。一共有5个生长阶段。完全生长后，可使用铁镐挖掘，挖掘后掉落一个天体水晶",
   "db.588.name": "星辉祭坛",
   "db.588.desc": "星辉祭坛比星辉合成台多4个物品格。",
   "db.589.name": "天辉祭坛",
