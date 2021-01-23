@@ -1553,7 +1553,7 @@
   "db.495.desc": "The Spectre Key gives you your own room in the Spectre Dimension.",
   "db.498.name": "种植灵气",
   "db.498.desc": "将树苗与灵气混合，可以得到灵气树。可以用骨粉来加速生长。它的叶子有小概率会掉落灵气，如果你运气好的话可以从一棵树上获得两个灵气。",
-  "db.574.name": "Speeding Up Blocks",
+  "db.574.name": "加速方块",
   "db.574.desc": "The Time in a Bottle allows you to speed up blocks using the time accumulated in it by having it in your inventory.",
   "db.591.name": "Regular Gems",
   "db.591.desc": "Regular Gems are all the Gems obtained from Stone.",
