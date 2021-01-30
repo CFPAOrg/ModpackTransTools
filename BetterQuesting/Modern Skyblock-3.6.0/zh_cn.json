@@ -1460,7 +1460,7 @@
   "db.312.name": "星辉合成台",
   "db.312.desc": "要制作星辉合成台和共鸣星杖，你需要用连接器连接浮动水晶（原子再构机制作）和工作台，并在其上制作",
   "db.438.name": "天体仪式",
-  "db.438.desc": "If you want AoE attunement perks to be active without you being there, you can put an Attuned Rock/Celestial Crystal on a Ritual Pedestal, with its multiblock setup, put a Ritual Anchor 3 blocks above it and one where you can the effect to happen, and link them together. You can enchance the effect by connecting a Floating Crystal to the Pedestal and then putting Lenses where green sparkles form.",
+  "db.438.desc": "如果你想要AoE 增援者在你不在那里的情况下工作, 你可以将一个开启的罗克或天体水晶放在一个仪式假人身上, 通过它的多块设置，在它上面放置一个仪式的锚点3块，一个你可以产生效果的地方，并将它们连接在一起。 你可以通过连接一个浮水晶，然后放置绿色闪光表单的狮子来获得效果。",
   "db.516.name": "遏制圣杯",
   "db.516.desc": "The Containment Chalice can be filled up with Liquid Starlight and it will be used instead of the blocks in the Starlight Infuser's structure. If there are 2 next to one another with fluids that can react with each other (for example Water and Lava), they will generate the block that'd be created when they are touching, as a dropped item.",
   "db.587.name": "天体水晶石",
