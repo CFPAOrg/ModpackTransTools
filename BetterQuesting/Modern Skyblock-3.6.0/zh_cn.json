@@ -1833,7 +1833,7 @@
   "db.410.desc": "捕鸡手能让你将鸡转变为物品。",
   "db.411.name": "鸡窝",
   "db.411.desc": "You can put up to 16 Chickens of the same type and tiers in Roosts to have them generate resources in them.",
-  "db.447.name": "Collecting From Roosts",
+  "db.447.name": "从鸡窝中收集",
   "db.447.desc": "The Roost Collector automatically collects the items from roosts in a 9x3x9 area.",
   "db.479.name": "给鸡染色",
   "db.479.desc": "You can dye Eggs and throw them for a chance of obtaining dye Chickens.",
