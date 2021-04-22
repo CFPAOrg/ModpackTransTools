@@ -1612,7 +1612,7 @@
   "db.691.name": "大型自动农场",
   "db.691.desc": "你可以制造一个使用水的大型多块农田， RF 和 Fertlizer 要运行，但是这是效率最高的方法",
   "db.692.name": "可升级电路板",
-  "db.692.desc": "Using a Soldering Iron, you can add Electron Tubes to Circuits, which you can then add to your Forestry machines to upgrade them.",
+  "db.692.desc": "用电烙铁将电子管焊接在电路板上，这样你就能把电路板放在林业机器中来升级机器。",
   "db.783.name": "工作台",
   "db.783.desc": "工作台能切换冲突的合成表，并能缓存9个合成表。",
   "db.826.name": "您有新邮件",
